@@ -24,7 +24,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Navigate to='/login' />}  />
-            <Route path="/login" element={<LoginForm />} />
+            <Route path="login" element={<LoginForm />} />
             <Route element={<PrivateRoute />} path="/">
               <Route path="/admin" element={<Layout />}>
                 <Route path="dashboard" element={<Dashboard />} />            
