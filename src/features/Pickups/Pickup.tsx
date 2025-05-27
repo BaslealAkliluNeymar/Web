@@ -1,5 +1,5 @@
 "use server"
-import { Suspense, useEffect, useState } from "react"
+import { Suspense, useEffect } from "react"
 import { columns } from "./columns"
 import { DataTable } from "./data-table"
 import { useSelector, useDispatch } from "react-redux"
@@ -8,8 +8,6 @@ import {  fetchVehicles } from "../../store/vehicleSlice"
 import VehicleDialogue from "./VehicleDialogue"
 import { generateUserAsync } from "../../store/authSlice"
 import { selectPermission } from "../../utils/selector"
-import { SonnerDemo } from "../../components/SonnerDemo"
-import { toast } from "sonner"
 
 
 export default  function Pickup() {

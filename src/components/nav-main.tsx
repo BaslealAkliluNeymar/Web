@@ -30,7 +30,7 @@ export function NavMain({
     items?: {
       title: string
       url: string
-      permisssion?: string
+      permission?: string
     }[]
   }[]
 }) {
@@ -56,7 +56,7 @@ export function NavMain({
               <CollapsibleContent>
                 <SidebarMenuSub>
                   {item.items?.map((subItem) => {    
-                    if(!subItem.permisssion){
+                    if(!subItem.permission){
                       return (
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton asChild>

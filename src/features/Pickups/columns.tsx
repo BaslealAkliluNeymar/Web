@@ -39,8 +39,7 @@ export const columns: ColumnDef<Vehicle>[] = [
   {
     id: "actions",
     header: () => <div className="text-base font-semibold text-muted-foreground">Actions</div>,
-    cell: ({ row }) => {
-      // const vehicle = row.original
+    cell: () => {
       return <Items />
     },
   },

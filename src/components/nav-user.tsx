@@ -1,12 +1,9 @@
 "use client"
 
 import {
-  BadgeCheck,
   Bell,
   ChevronsUpDown,
-  CreditCard,
   LogOut,
-  Sparkles,
 } from "lucide-react"
 
 import {
@@ -32,8 +29,8 @@ import {
 import { useDispatch, useSelector } from "react-redux"
 import { logoutAsync } from "../store/authSlice"
 import { useNavigate } from "react-router"
-import { AppDispatch, store } from "../store/store"
-import { Button } from "./ui/button"
+import { AppDispatch } from "../store/store"
+
 
 export function NavUser({
   user,

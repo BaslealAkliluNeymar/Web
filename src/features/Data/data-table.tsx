@@ -33,10 +33,10 @@ interface DataTableProps<TData, TValue> {
 
 
 
-export function DataTable<TData, TValue,perm_dict>({
+export function DataTable<TData, TValue>({
   columns,
   data,
-  perm_dict
+
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([])
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>(

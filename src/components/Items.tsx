@@ -13,7 +13,7 @@ import {
 import { useState } from "react";
 
 export default function Items() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [_, setIsOpen] = useState(false);
   const pickupItems = [
     {
       pickup_id: 1,
@@ -52,7 +52,7 @@ export default function Items() {
         
          <div className="flex-1 overflow-y-auto">
               <div className="p-6 space-y-4">
-                {pickupItems.map((item, index) => (
+                {pickupItems.map((item, _) => (
                   <div 
                     key={item.pickup_id} 
                     className="bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-4 hover:shadow-lg transition-all duration-300 hover:border-blue-200 group"

@@ -15,7 +15,7 @@ export function TeamSwitcher({
   }[]
 }) {
 
-  const [activeTeam, setActiveTeam] = React.useState(teams[0])
+  const [activeTeam, _] = React.useState(teams[0])
 
 
   return (

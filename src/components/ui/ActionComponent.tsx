@@ -1,4 +1,4 @@
-import { EllipsisVertical, X } from "lucide-react"
+import { EllipsisVertical } from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,9 +9,8 @@ import {
 import { Button } from "./button"
 import { openDialog } from "../../store/dialogueSlice"
 import { AppDispatch } from "../../store/store"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { Vehicle } from "../../types"
-import { use } from "react"
 import { selectPermission } from "../../utils/selector"
 
 
@@ -21,10 +20,7 @@ const ActionComponent =({ vehicle } :{ vehicle:Vehicle }) => {
   const handleEdit = (type:string) =>{
       dispatch(openDialog({type, vehicle}))
   }
-  const user = useSelector((state:any) => state.user.user)
 
-  const permission = selectPermission('vehicle','update')
-  // const read = selectPermission('vehicle','read')
   const write = selectPermission('vehicle','write')
   const view = selectPermission('vehicle','view')
   const update = selectPermission('vehicle','update')
@@ -35,9 +31,6 @@ const ActionComponent =({ vehicle } :{ vehicle:Vehicle }) => {
   }
 
 
-  const handleDelete = () =>{
-    console.log('delete action')
-  }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
