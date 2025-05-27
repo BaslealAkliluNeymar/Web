@@ -40,7 +40,7 @@ function App() {
                 <Route path="reports" element={<Data />} />
               </Route>
             </Route>
-            <Route path="*" element={<h1>404 Not Found</h1>} />
+            {/* <Route path="*" element={<h1>404 Not Found</h1>} /> */}
           </Routes>
         </Router>
     </ThemeProvider>
