@@ -1,4 +1,4 @@
-"use server"
+
 import { Suspense, useEffect } from "react"
 import { columns } from "./columns"
 import { DataTable } from "./data-table"
