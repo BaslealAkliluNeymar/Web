@@ -10,7 +10,7 @@ const initialState = {
 
 export const fetchDeliveries = createAsyncThunk('pickups/fetchPickups', async () => {
     try{
-        const delivery =await axios.get('http://localhost:3000/api/deliveries')
+        const delivery =await axios.get('https://web-server-vyw2.onrender.com/api/deliveries')
         // return pickups
         console.log(delivery.data)
     }

@@ -13,7 +13,7 @@ const initialState = {
 
 export const fetchPickups = createAsyncThunk('pickups/fetchPickups', async () => {
     try{
-        const pickups = await axios.get('http://localhost:3000/api/pickups')
+        const pickups = await axios.get('https://web-server-vyw2.onrender.com/api/pickups')
         return pickups
     }
     catch(err){

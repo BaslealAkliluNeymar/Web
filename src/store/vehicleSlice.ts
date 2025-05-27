@@ -16,7 +16,7 @@ export const fetchVehicles  = createAsyncThunk(
     async () =>{
         try{
             const token = localStorage.getItem('token')
-            const response = await axios.get('http://localhost:3000/api/vehicles', {
+            const response = await axios.get('https://web-server-vyw2.onrender.com/api/vehicles', {
                 headers:{
                     'Content-Type': 'application/json',
                     Authorization:`Basic ${token}`
@@ -39,7 +39,7 @@ export const addVehicle = createAsyncThunk(
     async(Vehicle:Vehicle) =>{
         try{
             const token = localStorage.getItem('token')
-            const response = await axios.post('http://localhost:3000/api/vehicles', Vehicle, {
+            const response = await axios.post('https://web-server-vyw2.onrender.com/api/vehicles', Vehicle, {
                 headers:{ 
                     'Content-Type': 'application/json',
                     Authorization:`Basic ${token}`
@@ -60,7 +60,7 @@ export const editVehicle  = createAsyncThunk(
     'vehicle/editVehicle',
     async (Vehicle:Vehicle) =>{
        const token = localStorage.getItem('token')
-       const response = await axios.put('http://localhost:3000/api/vehicles', Vehicle, {
+       const response = await axios.put('https://web-server-vyw2.onrender.com/api/vehicles', Vehicle, {
         headers:{   
             'Content-Type': 'application/json',
             'Authorization':`Basic ${token}`
@@ -73,7 +73,7 @@ export const editVehicle  = createAsyncThunk(
 export const deleteVehicle  = createAsyncThunk(
     'vehicle/deleteVehicle',
     async (Vehicle:Vehicle) =>{
-       const response = await axios.delete('http://localhost:3000/api/vehicles', {
+       const response = await axios.delete('https://web-server-vyw2.onrender.com/api/vehicles', {
          params:Vehicle.vehicle_id
        })
        return response.data
