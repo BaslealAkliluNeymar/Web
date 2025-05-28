@@ -99,17 +99,17 @@ perm_dict: {
           <DialogTrigger>
               <Button variant="outline" className="align-self-center mb-4">
                 <Plus />
-                  Add Vehicle
+                  Add Delivery
               </Button>    
         </DialogTrigger>
       } 
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            { dialogue.type === 'edit' ? 'Edit Vehicle' : dialogue.type === 'view' ? 'View Vehicle' : 'Add Vehicle'}
+            { dialogue.type === 'edit' ? 'Edit Delivery' : dialogue.type === 'view' ? 'View Delivery' : 'Add Delivery'}
           </DialogTitle>
           <DialogDescription>{
-            dialogue.type === 'edit' ? 'Edit Vehicle Details' : dialogue.type === 'view' ? 'View Vehicle Details' : 'Add New Vehicle'
+            dialogue.type === 'edit' ? 'Edit Delivery Details' : dialogue.type === 'view' ? 'View Delivery Details' : 'Add New Delivery'
           }
           </DialogDescription>
         </DialogHeader>
@@ -132,9 +132,9 @@ perm_dict: {
               <SelectValue placeholder="Theme" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="active">Active</SelectItem>
-              <SelectItem value="inactive">Inactive</SelectItem>
-              <SelectItem value="maintenance">Maintenance</SelectItem>
+              <SelectItem value="active">Delivered</SelectItem>
+              <SelectItem value="inactive">In-Transit</SelectItem>
+              <SelectItem value="maintenance">Halted</SelectItem>
             </SelectContent>
           </Select>
         </div>

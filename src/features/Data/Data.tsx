@@ -8,12 +8,12 @@ import {  fetchVehicles } from "../../store/vehicleSlice"
 import { generateUserAsync } from "../../store/authSlice"
 import { selectPermission } from "../../utils/selector"
 import { Input } from "../../components/ui/input"
-
+import Papa from 'papaparse';
 
 export default  function Data() {
   const dispatch = useDispatch<AppDispatch>()
   // const _ = useSelector((state:any) =>state.vehicle.vehicles)
-  const [data, _ ] = useState<any[]>([])
+  const [data, setData ] = useState<any[]>([])
   const view = selectPermission('vehicle','view')
   const update = selectPermission('vehicle','update')
   const read = selectPermission('vehicle','read')
@@ -44,14 +44,14 @@ export default  function Data() {
       console.error("Please upload a valid CSV file.");
       return;
     }
-    // Papa.parse(file, {
-    //   header: true,
-    //   skipEmptyLines: true,
-    //   complete: (results:any) => {
-    //     setData(results.data);
-    //     console.log(results.data);
-    //   },
-    // });
+    Papa.parse(file, {
+      header: true,
+      skipEmptyLines: true,
+      complete: (results:any) => {
+        setData(results.data);
+        console.log(results.data);
+      },
+    });
   }
   return (
     <div className="container mx-auto py-10">

@@ -1,5 +1,6 @@
 import { Navigate, Route, BrowserRouter as Router,Routes } from "react-router";
 import { ThemeProvider } from "../src/components/theme-provider";
+import 'leaflet/dist/leaflet.css';
 import "./App.css";
 import { LoginForm } from "./components/login-form";
 import PrivateRoute from "./components/PrivateRoute";

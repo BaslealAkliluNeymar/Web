@@ -8,29 +8,29 @@ import { Badge } from "../../components/ui/badge"
 export const columns: ColumnDef<Vehicle>[] = [
   {
     accessorKey: "plate_number",
-    header: () => <div className="text-base font-semibold text-muted-foreground">Plate Number</div>,
+    header: () => <div className="text-base font-semibold text-muted-foreground">SOS Number</div>,
   },
   {
     accessorKey: "vehicle_type",
-    header: () => <div className="text-base font-semibold text-muted-foreground">Vehicle Type</div>,
+    header: () => <div className="text-base font-semibold text-muted-foreground">Delivery Personnel</div>,
   },
   {
     accessorKey: "weight_capacity",
-    header: () => <div className="text-base font-semibold text-muted-foreground">Weight (kg)</div>,
+    header: () => <div className="text-base font-semibold text-muted-foreground">Message</div>,
   },
   {
     accessorKey: "current_status",
-    header: () => <div className="text-base font-semibold text-muted-foreground">Status</div>,
+    header: () => <div className="text-base font-semibold text-muted-foreground">Severity</div>,
     cell: ({ row }) => {
       const status = row.getValue("current_status") as string
 
       switch (status) {
         case "active":
-          return <Badge className="bg-green-600 hover:bg-green-600">Active</Badge>
+          return <Badge className="bg-green-600 hover:bg-green-600">Severe</Badge>
         case "inactive":
-          return <Badge className="bg-red-600 hover:bg-red-600">Inactive</Badge>
+          return <Badge className="bg-red-600 hover:bg-red-600">Maintainable</Badge>
         case "maintenance":
-          return <Badge className="bg-yellow-500 text-black hover:bg-yellow-500">Maintenance</Badge>
+          return <Badge className="bg-yellow-500 text-black hover:bg-yellow-500">Check Needed</Badge>
         default:
           return <Badge variant="outline">Unknown</Badge>
       }

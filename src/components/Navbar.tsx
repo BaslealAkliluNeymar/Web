@@ -13,16 +13,15 @@ const Navbar = () => {
   const navigate = useNavigate()
   
 
-  console.log(`from the nav user: ${User}`)
   const handleLogout = () =>{
     dispatch(logoutAsync())
     navigate("/login")
   }
   return (
     <nav className="flex item-center justify-between w-full p-4" >
-        <div>
-            <h1 className="text-2xl font-bold">My Application</h1>
-            <p className="text-sm text-gray-500">Welcome to my application</p>
+       <div className="flex flex-col gap-2 p-4">
+          <h1 className="text-4xl font-bold">FITHSCS Logistics</h1>
+          <p className="text-md text-gray-500">Welcome to the Fleet Management System</p>
         </div>
         <div className="flex items-center gap-4">
           <ModeToggle />

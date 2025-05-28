@@ -101,17 +101,17 @@ perm_dict: {
           <DialogTrigger>
               <Button variant="outline" className="align-self-center mb-4">
                 <Plus />
-                  Add Vehicle
+                  Add Facility
               </Button>    
         </DialogTrigger>
       } 
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            { dialogue.type === 'edit' ? 'Edit Vehicle' : dialogue.type === 'view' ? 'View Vehicle' : 'Add Vehicle'}
+            { dialogue.type === 'edit' ? 'Edit Facility' : dialogue.type === 'view' ? 'View Facility' : 'Add Facility'}
           </DialogTitle>
           <DialogDescription>{
-            dialogue.type === 'edit' ? 'Edit Vehicle Details' : dialogue.type === 'view' ? 'View Vehicle Details' : 'Add New Vehicle'
+            dialogue.type === 'edit' ? 'Edit Facility Details' : dialogue.type === 'view' ? 'View Facility Details' : 'Add New Facility'
           }
           </DialogDescription>
         </DialogHeader>

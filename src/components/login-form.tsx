@@ -55,17 +55,22 @@ export function LoginForm({
   }
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card className="w-1/3 mx-auto mt-42">
-        <CardHeader className="flex flex-col gap-1">
-          <CardTitle className="text-center text-2xl">FITSCS</CardTitle>
-          <CardDescription className="text-center text-sm">
-            Fleet Management System
-          </CardDescription>
-          <CardTitle>Login to your account</CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account
-          </CardDescription>
-        </CardHeader>
+    
+        <Card className="w-1/3 mx-auto mt-40">
+          <CardHeader className="text-center space-y-2">
+            <div>
+              <CardTitle className="text-2xl font-bold">FITSCS</CardTitle>
+              <CardDescription>Fleet Management System</CardDescription>
+            </div>
+            <div>
+              <CardTitle>Login to your account</CardTitle>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+            </div>
+          </CardHeader>
+       
+
         <CardContent>
           <form onSubmit={handleSubmit} >
             <div className="flex flex-col gap-6">
@@ -101,6 +106,17 @@ export function LoginForm({
           </form>
         </CardContent>
       </Card>
+
+      <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">Demo Admin Login</h2>
+        <p className="text-gray-600 mb-2">
+          <span className="font-medium">Email:</span> admin@gmail.com
+        </p>
+        <p className="text-gray-600">
+          <span className="font-medium">Password:</span> 1234
+        </p>
+        <p className="text-sm text-gray-400 mt-4">Use these credentials to log in as an admin.</p>
+      </div>
     </div>
   )
 }

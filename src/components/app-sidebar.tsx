@@ -83,11 +83,12 @@ const data = {
           url: "/admin/facilities",
           permisssion: selectPermission('pickup','write')
         },
-        {
-          title: "User Registration",
-          url: "/admin/users",
-          permisssion: selectPermission('pickup','write')
-        },
+        // },
+        // {
+        //   title: "User Registration",
+        //   url: "/admin/users",
+        //   permisssion: selectPermission('pickup','write')
+        // },
          {
           title: "Data",
           url: "/admin/reports",
@@ -97,12 +98,12 @@ const data = {
     },
     {
       title: "SOS Report",
-      url: "/",
+      url: "",
       icon: Bot,
       items: [
         {
           title: "SOS",
-          url: "#",
+          url: "/admin/sos",
           permisssion: selectPermission('pickup','write')
         }
       ],

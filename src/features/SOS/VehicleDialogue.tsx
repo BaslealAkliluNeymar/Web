@@ -3,8 +3,7 @@ import {
     DialogContent,
     DialogDescription,
     DialogHeader,
-    DialogTitle,
-    DialogTrigger,
+    DialogTitle
   } from "../../components/ui/dialog"
 import {
   Select,
@@ -15,7 +14,7 @@ import {
 } from "../../components/ui/select"
 import { Button } from "../../components/ui/button"
 import { Input } from "../../components/ui/input"
-import { Plus } from "lucide-react"
+
 import { useCallback, useEffect, useState } from "react"
 import { AppDispatch, RootState } from "../../store/store"
 import { useDispatch, useSelector } from "react-redux"
@@ -102,7 +101,7 @@ perm_dict: {
         dispatch(closeDialog()); 
       }
     }}>
-      {
+      {/* {
          perm_dict.write && 
           <DialogTrigger>
               <Button variant="outline" className="align-self-center mb-4">
@@ -110,14 +109,14 @@ perm_dict: {
                   Add Vehicle
               </Button>    
         </DialogTrigger>
-      } 
+      }  */}
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            { dialogue.type === 'edit' ? 'Edit Vehicle' : dialogue.type === 'view' ? 'View Vehicle' : 'Add Vehicle'}
+            { dialogue.type === 'edit' ? 'Edit Message' : dialogue.type === 'view' ? 'View Message' : 'Add Message'}
           </DialogTitle>
           <DialogDescription>{
-            dialogue.type === 'edit' ? 'Edit Vehicle Details' : dialogue.type === 'view' ? 'View Vehicle Details' : 'Add New Vehicle'
+            dialogue.type === 'edit' ? 'Edit Message Details' : dialogue.type === 'view' ? 'View Message Details' : 'Add New Message'
           }
           </DialogDescription>
         </DialogHeader>

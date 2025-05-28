@@ -8,15 +8,15 @@ import { Badge } from "../../components/ui/badge"
 export const columns: ColumnDef<Vehicle>[] = [
   {
     accessorKey: "plate_number",
-    header: () => <div className="text-base font-semibold text-muted-foreground">Plate Number</div>,
+    header: () => <div className="text-base font-semibold text-muted-foreground">Facility Name</div>,
   },
   {
     accessorKey: "vehicle_type",
-    header: () => <div className="text-base font-semibold text-muted-foreground">Vehicle Type</div>,
+    header: () => <div className="text-base font-semibold text-muted-foreground">Location</div>,
   },
   {
     accessorKey: "weight_capacity",
-    header: () => <div className="text-base font-semibold text-muted-foreground">Weight (kg)</div>,
+    header: () => <div className="text-base font-semibold text-muted-foreground">Order ID</div>,
   },
   {
     accessorKey: "current_status",

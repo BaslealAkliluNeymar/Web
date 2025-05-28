@@ -35,7 +35,6 @@ perm_dict: {
  }
 }) {
     
-    
     const [open, setOpen] = useState(false)
     const dispatch = useDispatch<AppDispatch>()
     const [formData, setFormData] = useState<Vehicle>({
@@ -105,19 +104,19 @@ perm_dict: {
       {
          perm_dict.write && 
           <DialogTrigger>
-              <Button variant="outline" className="align-self-center mb-4">
+              <Button variant="outline" className="align-self-center mb-4 ml-2">
                 <Plus />
-                  Add Vehicle
+                  Add Pickup
               </Button>    
         </DialogTrigger>
       } 
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            { dialogue.type === 'edit' ? 'Edit Vehicle' : dialogue.type === 'view' ? 'View Vehicle' : 'Add Vehicle'}
+            { dialogue.type === 'edit' ? 'Edit Pickup' : dialogue.type === 'view' ? 'View Pickup' : 'Add Pickup'}
           </DialogTitle>
           <DialogDescription>{
-            dialogue.type === 'edit' ? 'Edit Vehicle Details' : dialogue.type === 'view' ? 'View Vehicle Details' : 'Add New Vehicle'
+            dialogue.type === 'edit' ? 'Edit Pickup Details' : dialogue.type === 'view' ? 'View Pickup Details' : 'Add New Pickup'
           }
           </DialogDescription>
         </DialogHeader>
